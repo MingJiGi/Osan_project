@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+/* reset */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;} /* inherit 는 부모의 색상을 받기위해 사용 */
+
+/* layout */
+.mo{display: none;}
+.en{    font-family: "Exo 2", serif;}
+body{font-family: "Noto Sans KR", sans-serif; font-size: 14px;}
+.wrap{margin: 0 auto;}
+#skip-nav{position: fixed; left: 0; top: -41px; width: 100%; line-height: 40px; background: #ff8342; color: #fff; text-align: center; border-bottom: #ff0000;}
+#skip-nav:focus{top: 0;}
+header{position: fixed; top: 0; left: 0; width:100%; height: 100px; line-height: 100px; background: rgba(0, 0, 0, 0.2); z-index: 200;} /*z-index 값으로 안보이던 nav를 앞으로 변경*/
+.innerHeader:hover{background-color: #fff; transition: 0.4s;}
+.innerHeader:hover .gnb li a,.innerHeader:hover .tnb li a,.innerHeader:hover .logo a,.innerHeader:hover .gnb li i{color: black;}/* 검정색으로 변경 */
+.innerHeader{max-width: 1920px; min-width: 1400px; height: 100px; margin: 0 auto; box-sizing: border-box;  overflow: hidden;}
+.innerHeader .logo{float: left; color: #fff;}
+.innerHeader .logo a span{width: 100%; height: auto; padding-bottom: 25px; margin-left: 15px;}
+.innerHeader .gnb{float: left; margin-left: 30px; }
+.innerHeader .gnb li{float: left; margin-right: 10px; }
+.innerHeader .gnb li a{display: block; width: 100px; height: 100%; text-align: center; color: #fff; font-size: 16px; }
+.innerHeader .gnb li a:hover, .innerHeader .gnb li:focus{color: #ff8342;}
+.innerHeader .gnb li i:hover, .innerHeader .gnb li:focus{color: #ff8342;}
+.innerHeader .gnb li i{position: relative; top: 10px;}
+.innerHeader .tnb{float: right; background: rgba(0, 0, 0, 0.2); height: 100px; z-index: 200; }
+.innerHeader .tnb li{float: left; margin: 10px;}
+.innerHeader .tnb li a{display: block; width: 100%; height: 100%; text-align: center; font-size: 16px; color: #fff;}
+.innerHeader .tnb li:nth-child(1) a i,.innerHeader .tnb li:nth-child(2) a i {font-size: 20px; margin-right: 8px;}
+.innerHeader .tnb li:nth-child(3) a{display: block; width: 105px; line-height: 2; border: 1px solid #fff; border-radius: 30px; margin-top: 30px;}
+.innerHeader .tnb li:nth-child(3) a:hover{background: #ff8342; border-color: rgba(0, 0, 0, 0.2); color: #fff;}
+
+/* section.main */
+section.main{width: 100%; height: 100vh; background: url(./img/vis_4.jpg)no-repeat center; position: relative; background-attachment: fixed;}
+section .mainTitle{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center;}
+section .mainTitle h2:nth-child(1){animation-name: First; animation: First 2s; -moz-animation: First 2s; -webkit-animation: First 2s; -o-animation: First 2s; }
+@keyframes First{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+section .mainTitle h2:nth-child(2){animation-name: Second; animation: Second 4s; -moz-animation: Second 4s; -webkit-animation: Second 4s; -o-animation: Second 4s; }
+@keyframes Second{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+section .mainTitle p{animation-name: last;  animation: last 6s; -moz-animation: last 6s; -webkit-animation: last 6s; -o-animation: last 6s; ;}
+@keyframes last{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+section .mainTitle h2{font-size: 50px; margin-bottom: 25px;}
+section .mainTitle p{font-size: 25px; margin-bottom: 80px;}
+section .mainTitle .view{display: block; width: 182px; margin: 0 auto; padding: 8px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #fff; border-radius: 40px; position: relative; overflow: hidden;} /*넘치는 부분을 감쌀수 있도록 overflow hidden적용*/
+section .mainTitle .view:hover{background: #ff8342; transition: all 0.5s;}
+
+/* section.title */
+section .title{color: #000; text-align: center;}
+section .title h2{font-size: 45px; margin-bottom: 10px; font-weight: normal;}
+section .title h2 span{color: #ff8342;}
+section .title p{font-size: 16px; color: #555;}
+
+
+
+
+/* section.about */
+section.about{background: #fff; padding: 80px 0;}
+section.about ul{margin: 30px auto; width: 1400px; border-bottom: 1px solid #ddd; overflow: hidden; display: flex;}
+section.about ul li a{display: block; width: 100%; height: 100%;}
+section.about ul li a p.img{width: 100%; height: 364px; overflow: hidden;}
+section.about ul li a img img{width: 100%; height: auto;}
+section.about ul li a:hover p.img img, section.about ul li a:focus p.img img{transform:scale(1.2);transition: all 1s;}.text{padding: 5%;}
+section.about ul .text h3{font-size: 20px; margin: 0px 0px 8px;}
+section.about ul .text p{font-size: 16px; margin: 0px 0px 22px;}
+section.about ul .text p.more{text-transform: uppercase; padding-left: 40px; font-weight: bold; position: relative;}
+section.about ul .text p.more::before{content:'\f061'; font-family: FontAwesome; font-size: 15px; width: 30px; height: 30px; line-height: 30px; background: #ff8342; position: absolute; left: 0; display: block; border-radius: 50%; text-align: center; color: #f2f2f2;}
+/* section.innovations */
+section.innovations{margin-bottom: 150px;}
+section.innovations .title h2{text-transform: uppercase;}
+section .imgbox{width: 1440px; height: 540px; margin: 50px auto 0; background: url(./img/product_1.jpg)no-repeat center/cover; position: relative;}
+section .imgbox .inner{background: #3a3c4e; width: 80%; position: absolute; left: 50%; transform: translateX(-50%); bottom: -50px;}
+section .imgbox .inner h3{background: #fff; padding: 25px 45px; box-sizing: border-box; font-size: 18px;}
+section .imgbox .inner h3 span{color: #f86010; margin: 10px;}
+section .imgbox .inner .bottom{padding: 35px 85px; box-sizing: border-box; color: #fff; overflow: hidden; line-height: 1.5; overflow: hidden;}
+section .imgbox .inner .bottom p{float: left;}
+section .imgbox .inner .bottom a{float: right; padding: 7px 30px; background: #ff8342; border-radius: 50px;}
+section .imgbox .inner .bottom a:hover, section .imgbox .inner .bottom a:focus{background: #f86010; transition: 0.4s;}
+section .imgbox .inner .bottom h2:nth-child(1){position: relative;  float: left; left: -30px; bottom: 10px; text-transform: uppercase; font-size: 15px; display: inline;} 
+
+/* section.me */
+section.me{margin-bottom: 150px;  padding: 80px 0; background: url(./img/me.jpg)no-repeat center/cover;}
+section.me .title h2{text-transform: uppercase;}
+section.me ul.list{width: 1400px; margin: 50px auto;}
+section.me ul.list > li{padding: 30px 60px; box-sizing: border-box;}/* 리스트에 속한 li에만 padding 값을 지정  */
+section.me ul.list > li:nth-child(1){border-bottom: 3px solid #ddd; border-top: 4px solid black;}
+section.me ul.list li h3{font-size: 13px; margin-bottom: 20px; position: relative;}
+section.me ul.list li h3 span{position: absolute; left: -35px; color: #f86010;}
+section.me ul.list li > p{line-height: 1.6; margin-bottom: 20px;}
+section.me ul.list li > a{display: inline-block; font-weight: bold; font-size: 16px; line-height: 1.6;}
+section.me ul.list li > a span{color: #ff8342; font-weight: bold; margin-left: 3px;}
+section.me ul.in{margin-bottom: 30px;}
+section.me ul.in li{overflow: hidden;}
+section.me ul.in li em{float: left; width: 12%; font-weight: bold;}
+section.me ul.in li p{float: left; width: 80%; position: relative;}
+section.me ul.in li p::before{content: ''; position: absolute; left: -40px; top: 10px; width: 4px; height: 4px; border-radius: 50%; background: #ddd;}
+section.me button{display: block; width: 200px; background: #ff8342; border: none; padding: 10px 0; font-weight: bold; text-align: center; margin: 50px auto; border-radius: 50px; color: #fff;}
+section.me button:hover{background: #f86010; transition: 0.4s;}
+/* section.sns */
+section.sns{margin-bottom: 60px;}
+section.sns .title .bp{text-transform: uppercase; word-spacing: 80px; margin-top: 20px; font-weight: 1000; color: gray; position: relative;}
+section.sns .title .bp a:nth-child(1)::before{content: ''; background: red; border-radius: 50%; position: absolute; border: 1px solid #ddd; top: 14px; width: 1px; height: 1px;  left: 50%;}
+section.sns .title h2{text-transform: uppercase;}
+section.sns ul{width: 1400px; margin: 50px auto; overflow: hidden;}
+section.sns ul li{float: left; width: 32%; margin-right: 1%;}
+section.sns ul li:last-child{margin-right: 0;}
+section.sns ul li a{display: block; width: 100%; height: 100%;}
+section.sns ul li a p.img{height: 251px; overflow: hidden; position: relative;}
+section.sns ul li a p.img::before{content: ' '; width: 0%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(255, 131, 66, 0.9); transition: all 0.5s;}
+section.sns ul li a p.img img{width: 100%;}
+section.sns ul li a:hover p.img::before,section.sns ul li a:focus p.img::before {width: 100%; transition: all 0.9s;}
+section.sns ul li a p.img::after{content: 'BLOG'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);font-family: "Exo 2", serif; font-size: 15px; color: #fff; border: 1px solid #fff; border-radius: 40px; padding: 5px 30px; opacity: 0; transition: 0.5s;}
+section.sns ul li a:hover p.img::after,section.sns ul li a:focus p.img::after{opacity: 1; transition: all 0.5s;}
+section.sns ul li a .bottom{width: 100%; padding: 20px 0px 20px 10px; box-sizing: border-box;}
+section.sns ul li a .bottom p{margin: 10px; font-size: 18px; font-weight: bold;}
+section.sns ul li a .bottom p:nth-child(3){font-size: 12px;}
+section.sns ul li a .bottom p.color{color: #f86010;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
