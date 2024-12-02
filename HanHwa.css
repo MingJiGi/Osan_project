@@ -32,7 +32,7 @@ header{position: fixed; top: 0; left: 0; width:100%; height: 100px; line-height:
 .innerHeader .tnb li:nth-child(3) a:hover{background: #ff8342; border-color: rgba(0, 0, 0, 0.2); color: #fff;}
 
 /* section.main */
-section.main{width: 100%; height: 100vh; background: url(https://github.com/MingJiGi/Osan_project/blob/main/vis_4.jpg?raw=true)no-repeat center; position: relative; background-attachment: fixed;}
+section.main{width: 100%; height: 100vh; background: url(./img/vis_4.jpg)no-repeat center; position: relative; background-attachment: fixed;}
 section .mainTitle{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center;}
 section .mainTitle h2:nth-child(1){animation-name: First; animation: First 2s; -moz-animation: First 2s; -webkit-animation: First 2s; -o-animation: First 2s; }
 @keyframes First{
@@ -124,26 +124,3 @@ section.sns ul li a .bottom{width: 100%; padding: 20px 0px 20px 10px; box-sizing
 section.sns ul li a .bottom p{margin: 10px; font-size: 18px; font-weight: bold;}
 section.sns ul li a .bottom p:nth-child(3){font-size: 12px;}
 section.sns ul li a .bottom p.color{color: #f86010;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
